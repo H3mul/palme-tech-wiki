@@ -1,0 +1,57 @@
+@use 'mixins' as mx;
+
+div.datatable-begin + div.table-wrapper {
+    box-shadow: none;
+}
+
+.w-25 {
+    width: 25% !important;
+}
+.w-50 {
+    width: 50% !important;
+}
+.w-75 {
+    width: 75% !important;
+}
+.w-100 {
+    width: 100% !important;
+}
+
+img.rounded-10 {
+  border-radius: 10px !important;
+}
+div.rounded-10 img {
+  border-radius: 10px !important;
+}
+
+td:has(.text-center) {
+    text-align: center;
+}
+
+p {
+    >img {
+        &:not(.no-popup) {
+            cursor: zoom-in;
+        }
+        &:not(.normal):not(.left):not(.right) {
+            @include mx.align-center;
+
+            @extend %img-caption
+        }
+    }
+}
+
+%img-caption {
+  + em {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 80%;
+    padding: 0;
+  }
+}
+
+// Hide glightbox alt text description
+div.gslide-description {
+    display: none
+}

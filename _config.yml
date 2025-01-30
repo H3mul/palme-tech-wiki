@@ -2,7 +2,62 @@ title: Just the Docs Template
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: "https://h3mul.github.io"
+baseurl: "/palme-tech-wiki-test"
+
+logo: /assets/img/palme-logo-eagle.png
+favicon_ico: "/assets/img/favicons/favicon.ico"
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+callouts:
+  warning:
+    color: yellow
+
+collections:
+  inventory:
+    output: true
+
+just_the_docs:
+  collections:
+    inventory:
+      name: Inventory
+      nav_fold: true
+      # nav_exclude: true
+
+defaults:
+  - scope:
+      path: ""
+      type: inventory
+    values:
+      layout: post
+
+color_scheme: dark
+
+remote_theme: just-the-docs/just-the-docs@v0.10.1
+plugins:
+  - jekyll-remote-theme
+
+exclude:
+  [
+    "node_modules/",
+    "*.gemspec",
+    "*.gem",
+    "Gemfile",
+    "Gemfile.lock",
+    "package.json",
+    "package-lock.json",
+    "script/",
+    "LICENSE.txt",
+    "lib/",
+    "bin/",
+    "README.md",
+    "Rakefile",
+    "docker-compose.yaml",
+  ]
+
+sass:
+  # Hide darken() dep warnings
+  # https://github.com/just-the-docs/just-the-docs/issues/1541#issuecomment-2401649789
+  quiet_deps: true 
