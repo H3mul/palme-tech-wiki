@@ -1,12 +1,13 @@
 ---
 title: Altman 65Q Frensel Light
 inventory:
-    category: light
+    type: fixture
+    category: incandescent
     quantity: 10
     image_url: /assets/img/light_mini.jpg
 
-power: 750 #W
-cone: 59 #deg
+    power: 750 #W
+    cone: 59 #deg
 ---
 
 > Not enough mounting clamps for all units

@@ -1,12 +1,13 @@
 ---
 title: Altman 3.5Q Ellipsoidal Spot
 inventory:
-    category: light
+    type: fixture
+    category: incandescent
     quantity: 1
     image_url: /assets/img/light_flood_4.jpg
 
-power: 575 #W
-cone: 48 #deg
+    power: 575 #W
+    cone: 48 #deg
 ---
 
 {% include light-summary.md %}

@@ -1,15 +1,19 @@
 ---
-title: Flood Light 1
+title: Flood Light 2
 inventory:
-    category: light
-    quantity: 4
-    image_url: /assets/img/light_flood_1.jpg
+    type: fixture
+    category: incandescent
+    quantity: 2
+    image_url: /assets/img/light_flood_3.jpg
 
-power: 1000 #kW
-cone: ~25-50
+    power: 1000 #kW
+    cone: ~30-50
 ---
 
 > TODO: Unidentified fixture
+{: .warning }
+
+> 2 more fixtures are in storage that require repairs 
 {: .warning }
 
 {% include light-summary.md %}
@@ -24,8 +28,3 @@ Features
 ## Bulb
 
 {% include bulbs/g95.md %}
-
-## Images
-
-![socket]({{ '/assets/img/light_flood_1_socket.jpg' | relative_url }}){: .w-50 }
-_Bulb socket close-up_

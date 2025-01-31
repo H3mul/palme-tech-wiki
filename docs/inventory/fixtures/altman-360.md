@@ -1,12 +1,13 @@
 ---
 title: Altman 360Q 6 x 9 Ellipsoidal Spot
 inventory:
-    category: light
+    type: fixture
+    category: incandescent
     quantity: 7
     image_url: /assets/img/light_flood_2.jpg
 
-power: 750 #W
-cone: 37 #deg
+    power: 750 #W
+    cone: 37 #deg
 ---
 
 {% include light-summary.md %}

@@ -7,7 +7,6 @@
 const popupImgSelector = 'img:not(.no-popup)';
 
 function updateImages() {
-  console.log("setting up glightbox")
   GLightbox({ selector: `${popupImgSelector}` });
 }
 

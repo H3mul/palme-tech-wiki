@@ -1,12 +1,13 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
-theme: just-the-docs
+title: Palme Tech Wiki
+description: Palme Tech Wiki and Knowledge Base
 
 url: "https://h3mul.github.io"
 baseurl: "/palme-tech-wiki-test"
 
 logo: /assets/img/palme-logo-eagle.png
 favicon_ico: "/assets/img/favicons/favicon.ico"
+
+theme: just-the-docs
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
@@ -15,23 +16,17 @@ callouts:
   warning:
     color: yellow
 
-collections:
-  inventory:
-    output: true
-
-just_the_docs:
-  collections:
-    inventory:
-      name: Inventory
-      nav_fold: true
-      # nav_exclude: true
-
 defaults:
   - scope:
-      path: ""
-      type: inventory
+      path: "docs"
+      type: pages 
     values:
-      layout: post
+      layout: wiki
+  - scope:
+      path: "docs/inventory/fixtures"
+    values:
+      parent: Fixture Inventory
+
 
 color_scheme: dark
 

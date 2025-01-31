@@ -1,0 +1,20 @@
+fields:
+  power:
+    title: Power (W)
+  cone:
+    title: Cone (<sup>o</sup>)
+  quantity:
+    title: Inventory
+  image_url:
+    title: Image
+    align: 'center'
+
+fixture_fields:
+  pre:
+    - quantity
+  post:
+    - item
+    - image_url
+  incandescent:
+    - power
+    - cone
