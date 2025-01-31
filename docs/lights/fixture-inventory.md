@@ -37,14 +37,14 @@ parent: Lighting Department
 
 {% for field in fields %}
     {% assign cap_title = field | capitalize %}
-    {% assign title = fields_title_map[field].title | default: cap_title %}
+    {% assign title = fields_mapping[field].title | default: cap_title %}
     {% assign field_titles = field_titles | push: title %}
 
     {% if fields_mapping[field].align == 'center' %}
         {% assign field_spacers = field_spacers | push: ':---:' %}
-    {% elsif fields_title_map[field].align == 'left' %}
+    {% elsif fields_mapping[field].align == 'left' %}
         {% assign field_spacers = field_spacers | push: ':---' %}
-    {% elsif fields_title_map[field].align == 'right' %}
+    {% elsif fields_mapping[field].align == 'right' %}
         {% assign field_spacers = field_spacers | push: '---:' %}
     {% else %}
         {% assign field_spacers = field_spacers | push: '---' %}
