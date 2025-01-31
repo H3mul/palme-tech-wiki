@@ -7,6 +7,9 @@ div.datatable-begin + div.table-wrapper {
 .w-25 {
     width: 25% !important;
 }
+.w-40 {
+    width: 40% !important;
+}
 .w-50 {
     width: 50% !important;
 }
@@ -35,9 +38,8 @@ p {
         }
         &:not(.normal):not(.left):not(.right) {
             @include mx.align-center;
-
-            @extend %img-caption
         }
+        @extend %img-caption
     }
 }
 
