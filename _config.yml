@@ -2,7 +2,7 @@ title: Palme Tech Wiki
 description: Palme Tech Wiki and Knowledge Base
 
 url: "https://h3mul.github.io"
-baseurl: "/palme-tech-wiki"
+baseurl: ""
 
 logo: /assets/img/palme-logo-eagle.png
 favicon_ico: "/assets/img/favicons/favicon.ico"
@@ -10,7 +10,7 @@ favicon_ico: "/assets/img/favicons/favicon.ico"
 theme: just-the-docs
 
 aux_links:
-  Palme Tech Repository: https://github.com/h3mul/palme-tech
+  Palme Tech Github: https://github.com/palme-tech
   Palme Theater Home: https://palmetheatre.com
 
 callouts:
