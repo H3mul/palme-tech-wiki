@@ -5,6 +5,6 @@ services:
       - 4000:4000
     volumes:
       - "./:/site"
-      - "jekyll-cache:/site/.jekyll-cache"
+      # - "jekyll-cache:/site/.jekyll-cache"
 volumes:
   jekyll-cache:
