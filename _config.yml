@@ -28,12 +28,15 @@ defaults:
     values:
       parent: Fixture Inventory
 
+last_edit_timestamp: true
+last_edit_time_format: "%b %e %Y at %I:%M %p"
 
 color_scheme: dark
 
 remote_theme: just-the-docs/just-the-docs@v0.10.1
 plugins:
   - jekyll-remote-theme
+  - jekyll-last-modified-at
 
 exclude:
   [
