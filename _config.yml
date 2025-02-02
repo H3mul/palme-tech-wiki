@@ -17,6 +17,17 @@ callouts:
   warning:
     color: yellow
 
+lang: en
+
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Hemul
+  email: phil.d324@gmail.com
+  links:
+    # The first element serves as the copyright owner's link
+    - https://github.com/h3mul # change to your Twitter homepage
+
 defaults:
   - scope:
       path: "docs"
@@ -32,10 +43,12 @@ defaults:
 
 analytics:
   goatcounter:
-    id: hemular
+    id: palme-tech
 
-last_edit_timestamp: true
-last_edit_time_format: "%b %e %Y at %I:%M %p"
+pageviews:
+  provider: goatcounter
+
+post_date_format : "%b %e %Y at %I:%M %p"
 
 color_scheme: dark
 

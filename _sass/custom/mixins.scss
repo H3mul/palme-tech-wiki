@@ -3,3 +3,9 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@mixin dot($pl: 0.25rem, $pr: 0.25rem) {
+  content: '\2022';
+  padding-left: $pl;
+  padding-right: $pr;
+}
