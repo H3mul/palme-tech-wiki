@@ -1,5 +1,7 @@
 @use 'mixins' as mx;
 
+$text-muted-color: $nav-child-link-color;
+
 div.datatable-begin + div.table-wrapper {
     box-shadow: none;
 }
@@ -50,10 +52,15 @@ p {
     font-style: normal;
     font-size: 80%;
     padding: 0;
+    color: $text-muted-color !important;
   }
 }
 
 // Hide glightbox alt text description
 div.gslide-description {
     display: none
+}
+
+.text-muted {
+  color: $text-muted-color !important;
 }

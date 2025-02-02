@@ -2,13 +2,10 @@
 layout: wiki
 title: Fixture Inventory
 datatable: true
+parent: Lighting Department
 # Dont list children in nav, but still have breadcrumbs
 has_children: false
-
-parent: Lighting Department
 ---
-
-{% include toc_header.md %}
 
 {% assign fixtures_all = site.pages | where: 'inventory.type', 'fixture' %}
 {% assign fixture_categories = fixtures_all | map: 'inventory' | map: 'category' | uniq %}

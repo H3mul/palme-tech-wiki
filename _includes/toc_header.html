@@ -1,0 +1,10 @@
+{% if page.toc %}
+{% capture toc_content %}
+{% include toc.html html=content %}
+{% endcapture %}
+{% assign toc_content_stripped = toc_content | strip %}
+{% if toc_content_stripped != "" %}
+{% include toc_heading_custom.html %}
+{{ toc_content }}
+{% endif %}
+{% endif %}

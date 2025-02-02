@@ -4,4 +4,13 @@ layout: post
 
 {% include datatable.html %}
 
+<div class="post-meta text-muted">
+    <h1 class=".no_toc">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-desc fw-light mb-4">{{ page.description }}</p>
+    {% endif %}
+</div>
+
+{% include toc_header.html %}
+
 {{ content }}

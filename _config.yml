@@ -23,10 +23,12 @@ defaults:
       type: pages 
     values:
       layout: wiki
+      toc: true
   - scope:
       path: "docs/inventory/fixtures"
     values:
       parent: Fixture Inventory
+      toc: true
 
 analytics:
   goatcounter:

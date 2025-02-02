@@ -4,8 +4,6 @@ layout: wiki
 parent: Lighting Department
 ---
 
-{% include toc_header.md %}
-
 ## Hardware Limits
 
 *There's a bit of leeway in these numbers, since single phase AC voltage doesn't fully convert to actual power. Setting max to P = VI is a good rule of thumb.*
