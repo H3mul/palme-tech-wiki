@@ -3,8 +3,6 @@ title: Power Considerations
 description: Guidelines and hardware limitations of Palme's lighting power grid
 layout: wiki
 parent: Lighting Department
-
-date: 01/02/2025
 ---
 
 ## Hardware Limits
