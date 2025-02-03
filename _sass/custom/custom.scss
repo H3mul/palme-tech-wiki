@@ -100,3 +100,48 @@ div.toc, h1+.post-meta {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
+body a,.btn {
+    transition: all .3s ease-in-out;
+}
+
+.btn {
+    border-radius: 50% !important;
+    padding: 0px !important;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+button:focus {
+  outline:none !important;
+  box-shadow: none !important;
+}
+
+li.aux-nav-list-item+li.aux-nav-list-item:has(.btn)::before {
+    @include mx.dot;
+}
+
+li.aux-nav-list-item a i {
+    margin-right: 0.5rem;   
+}
+
+span:has(button.btn) {
+    display: inline-block;
+    padding: 0.625rem;
+}
+
+.side-bar button.theme-toggle {
+    display: none
+}
+nav.aux-nav li.aux-nav-list-item:has(.btn) {
+    display: inline-block;
+}
+
+@media (min-width: 50rem) {
+    .side-bar button.theme-toggle {
+        display: inline-block;
+    }
+    nav.aux-nav li.aux-nav-list-item:has(.btn) {
+        display: none;
+    }
+}

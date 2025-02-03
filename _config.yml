@@ -10,8 +10,12 @@ favicon_ico: "/assets/img/favicons/favicon.ico"
 theme: just-the-docs
 
 aux_links:
-  Palme Tech Github: https://github.com/palme-tech
-  Palme Theater Home: https://palmetheatre.com
+  - title: Palme Tech Github
+    url: https://github.com/palme-tech
+    icon_class: fa-brands fa-github
+  - title: Palme Theatre
+    url:  https://palmetheatre.com
+    icon_class: fa-solid fa-masks-theater
 
 callouts:
   warning:
@@ -35,11 +39,11 @@ defaults:
     values:
       layout: wiki
       toc: true
-      meta: true
   - scope:
       path: "docs/inventory/fixtures"
     values:
       parent: Fixture Inventory
+      toc: true
 
 analytics:
   goatcounter:
