@@ -3,18 +3,19 @@ fields:
     title: Power (W)
   cone:
     title: Cone (<sup>o</sup>)
+    align: right
   quantity:
     title: Inventory
   image_url:
     title: Image
-    align: 'center'
+    align: center
 
 fixture_fields:
   pre:
-    - quantity
-  post:
     - item
-    - image_url
+    - quantity
   incandescent:
     - power
     - cone
+  post:
+    - image_url

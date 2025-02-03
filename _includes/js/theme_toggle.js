@@ -14,8 +14,10 @@ const Theme = {
 function setTheme(dark = true) {
     if (dark) {
         jtd.setTheme(darkColorScheme);
+        document.documentElement.classList.add('dark');
     } else {
         jtd.setTheme(lightColorScheme);
+        document.documentElement.classList.remove('dark');
     }
     sessionStorage.setItem(sessionAttr, dark ? Theme.DARK: Theme.LIGHT);
 }

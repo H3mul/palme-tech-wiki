@@ -3,6 +3,9 @@
 <!-- Include the standard DataTables bits -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
 <!-- First, this walks through the tables that occur between ...-begin
         and ...-end and add the "datatable" class to them.
         Then it invokes DataTable's standard initializer
@@ -12,9 +15,10 @@
     $(document).ready(function(){
         $('div.datatable-begin').nextUntil('div.datatable-end').children('table').addClass('display');
         $('table.display').DataTable( {
-            paging: true,
-            stateSave: true,
-            searching: true
+            responsive: true,
+            columnDefs: [
+                { responsivePriority: 10000, targets: -1 }
+            ],
         });
     });
 </script>
