@@ -7,41 +7,29 @@ parent: Lighting Department
 has_children: false
 ---
 
-{% assign fixtures_all = site.pages | where: 'inventory.type', 'fixture' %}
-{% assign fixture_categories = fixtures_all | map: 'inventory' | map: 'category' | uniq %}
+{% assign fixtures = site.pages | where: 'inventory.type', 'fixture' %}
 
-
-{% for category in fixture_categories -%}
-
-## {{ category | capitalize }}
-
-{% assign fixtures = fixtures_all | where: 'inventory.category', category -%}
-{% assign unknown_char = "?" -%}
-
+{% assign unknown_char = "N/A" -%}
 {% if fixtures.size > 0 %}
 
 <div class="datatable-begin"></div>
 
-{% assign fixture_fields = site.data.fixtures.fields.fixture_fields %}
-{% assign category_fields = '' | split: ',' %}
-{% assign category_fields = fixture_fields[category] | default: category_fields %}
-{% assign fields = fixture_fields.pre | concat: category_fields | concat: fixture_fields.post %}
-
-{% assign fields_mapping = site.data.fixtures.fields.fields %}
+{% assign field_attrs = site.data.inventory.fields %}
+{% assign field_order = site.data.inventory.order %}
 
 {% assign field_titles = '' | split: ',' %}
 {% assign field_spacers = '' | split: ',' %}
 
-{% for field in fields %}
+{% for field in field_order %}
     {% assign cap_title = field | capitalize %}
-    {% assign title = fields_mapping[field].title | default: cap_title %}
+    {% assign title = field_attrs[field].title | default: cap_title %}
     {% assign field_titles = field_titles | push: title %}
 
-    {% if fields_mapping[field].align == 'center' %}
+    {% if field_attrs[field].align == 'center' %}
         {% assign field_spacers = field_spacers | push: ':---:' %}
-    {% elsif fields_mapping[field].align == 'left' %}
+    {% elsif field_attrs[field].align == 'left' %}
         {% assign field_spacers = field_spacers | push: ':---' %}
-    {% elsif fields_mapping[field].align == 'right' %}
+    {% elsif field_attrs[field].align == 'right' %}
         {% assign field_spacers = field_spacers | push: '---:' %}
     {% else %}
         {% assign field_spacers = field_spacers | push: '---' %}
@@ -53,7 +41,7 @@ has_children: false
 
 {%- for fixture in fixtures -%}
     {%- assign fixture_fields = '' | split: ',' -%}
-        {%- for field in fields -%}
+        {%- for field in field_order -%}
             {%- if field == 'image_url' -%}
                 {%- capture data -%}
 ![]({{ fixture.inventory.image_url | relative_url }}){: width="100" .rounded-10 }
@@ -62,6 +50,8 @@ has_children: false
                 {%- capture data -%}
 [{{ fixture.title }}]({{ fixture.url | relative_url }})
                 {%- endcapture -%}
+            {%- elsif field == 'category' -%}
+                {%- assign data = fixture.inventory.category | capitalize | default: unknown_char -%}
             {%- else -%}
                 {%- assign data = fixture.inventory[field] | default: unknown_char -%}
             {%- endif -%}
@@ -73,4 +63,3 @@ has_children: false
 <div class="datatable-end"></div>
 
 {% endif %}
-{% endfor %}

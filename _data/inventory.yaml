@@ -1,6 +1,7 @@
 fields:
   power:
     title: Power (W)
+    align: right
   cone:
     title: Cone (<sup>o</sup>)
     align: right
@@ -10,12 +11,10 @@ fields:
     title: Image
     align: center
 
-fixture_fields:
-  pre:
+order:
     - item
+    - category
     - quantity
-  incandescent:
     - power
     - cone
-  post:
     - image_url

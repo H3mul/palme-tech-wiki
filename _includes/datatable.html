@@ -1,11 +1,6 @@
 {% if page.datatable == true %}
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<!-- Include the standard DataTables bits -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.min.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+<link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.2.1/cr-2.0.4/r-3.0.3/rg-1.5.1/datatables.min.css" rel="stylesheet">
+<script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.2.1/cr-2.0.4/r-3.0.3/rg-1.5.1/datatables.min.js"></script>
 <!-- First, this walks through the tables that occur between ...-begin
         and ...-end and add the "datatable" class to them.
         Then it invokes DataTable's standard initializer
@@ -16,9 +11,16 @@
         $('div.datatable-begin').nextUntil('div.datatable-end').children('table').addClass('display');
         $('table.display').DataTable( {
             responsive: true,
+            colReorder: true,
             columnDefs: [
-                { responsivePriority: 10000, targets: -1 }
+                { responsivePriority: 10000, targets: -1 },
+                { visible: false, responsivePriority: 10000, targets: 1 },
+                { responsivePriority: 1, targets: '_all' }
             ],
+            order: [ [1, 'asc'], [2, 'asc'] ],
+            rowGroup: {
+                dataSrc: 1
+            }
         });
     });
 </script>
