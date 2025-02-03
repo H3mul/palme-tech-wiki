@@ -97,8 +97,8 @@ div.toc, h1+.post-meta {
 .sidebar-bottom {
     padding-left: 2rem;
     padding-right: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 body a,.btn {
@@ -137,11 +137,16 @@ nav.aux-nav li.aux-nav-list-item:has(.btn) {
     display: inline-block;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: $content-width) {
     .side-bar button.theme-toggle {
         display: inline-block;
     }
     nav.aux-nav li.aux-nav-list-item:has(.btn) {
         display: none;
+    }
+
+    .sidebar-bottom {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }

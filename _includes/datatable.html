@@ -8,20 +8,21 @@
     -->
 <script>
     $(document).ready(function(){
-        $('div.datatable-begin').nextUntil('div.datatable-end').children('table').addClass('display');
-        $('table.display').DataTable( {
+        const dataTableConfig = {
             responsive: true,
-            colReorder: true,
             columnDefs: [
                 { responsivePriority: 10000, targets: -1 },
                 { visible: false, responsivePriority: 10000, targets: 1 },
                 { responsivePriority: 1, targets: '_all' }
             ],
-            order: [ [1, 'asc'], [2, 'asc'] ],
+            order: [[1, 'asc'], [2, 'asc']],
             rowGroup: {
                 dataSrc: 1
             }
-        });
+        };
+        const table = $('div.datatable-begin').nextUntil('div.datatable-end').children('table');
+        table.addClass('display'); 
+        table.DataTable(dataTableConfig)
     });
 </script>
 {% endif %}
