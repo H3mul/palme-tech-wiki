@@ -13,4 +13,4 @@ gem "jekyll-last-modified-at", "1.3.2"
 # darken(), @import
 # https://github.com/just-the-docs/just-the-docs/issues/1541#issuecomment-2401649789
 # https://github.com/sass-contrib/sass-embedded-host-ruby/issues/265#issuecomment-2628492213 
-gem "sass-embedded", "~> 1.78.0"
+gem "sass-embedded", "~> 1.82.0"
